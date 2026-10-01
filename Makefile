@@ -20,6 +20,19 @@ TOOLPATH := $(XEDK)/bin/win32
 COMPILER := "$(TOOLPATH)/cl.exe"
 LINKER := "$(TOOLPATH)/link.exe"
 IMAGEXEX := "$(TOOLPATH)/imagexex.exe"
+# correct directory if not on Windows
+# this operates under the assumption that the XEDK and XexTool path is relative to /,
+# and that the WINEPREFIX maps Z: to /
+ifneq ($(OS),Windows_NT)
+ifeq ($(XEDK),$(subst :, ,$(XEDK)))
+    XEDK := Z:$(XEDK)
+    $(info Toolchain path corrected to $(XEDK))
+endif
+ifeq ($(XEXTOOL),$(subst :, ,$(XEXTOOL)))
+    XEXTOOL := Z:$(XEXTOOL)
+    $(info XexTool path corrected to $(XEXTOOL))
+endif
+endif
 XEXTOOL := $(XEXTOOL)/XexTool.exe
 # include directories
 INCLUDES := "$(XEDK)/include/xbox" 
