@@ -39,6 +39,9 @@ you have been scammed!
   start running the exploit!*
 * An option to automatically patch without a prompt, or automatically boot into
   XeLL.
+  See [Automatic Patching](https://github.com/FreeMyXe/FreeMyXe/wiki/Automatic-Patching)
+    * A different autoboot option can be chosen when booting the console with
+      the eject button.
 * Support for internal hard drives and SSDs over 500GB thanks to
   [Bad Storage by Eaton Works](https://fatxplorer.eaton-works.com/bad-storage/).
 
@@ -55,11 +58,8 @@ you have been scammed!
 
 ### Original Xbox support
 
-The patches made by FreeMyXe are not fully compatible with running Original Xbox
-games. Before starting any Original Xbox title, you **must** launch
-"OGXboxPrep.xex" first via XeXMenu or similar, and after you're done playing
-Original Xbox games, you must launch it again to make some 360 homebrew work
-again. This is included in FreeMyXe beta4 and above.
+As of FreeMyXe 1.2, Original Xbox games will just launch and run fine. There is
+no need to run "OGXboxPrep.xex" and it is no longer included in FreeMyXe.
 
 ## Developers and Contributors
 
@@ -73,7 +73,7 @@ again. This is included in FreeMyXe beta4 and above.
 
 ## Copyright
 
-FreeMyXe © Copyright FreeMyXe Team, 2025
+FreeMyXe © Copyright FreeMyXe Team, 2025 - 2026
 
 Redistribution of FreeMyXe release binaries (as found on GitHub Releases) is
 permitted, so long as you are redistributing it for free (free as in gratis) -
@@ -110,6 +110,7 @@ https://github.com/EatonZ/BadStorage.
 * Byrom90 for help with Freeboot patches.
 * Hayzen for the XNotify permissions patch.
 * Eaton Works for Bad Storage.
+* Grimdoomer for the updated memory protection patch.
 
 (let me know if I got anything wrong!)
 

@@ -10,3 +10,4 @@ extern unsigned int XexLoadImage(LPCSTR szXexName, DWORD dwModuleTypeFlags, DWOR
 extern void HalSendSMCMessage(LPVOID pCommandBuffer, LPVOID pRecvBuffer);
 extern void KeSweepIcacheRange(PVOID Address, DWORD cbBytes);
 extern void KeFlushEntireTb();
+extern char *ExLoadedImageName;
